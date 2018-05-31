@@ -4,14 +4,14 @@
   "description": "lrc maker",
   "main": "index.js",
   "scripts": {
-    "test": "yarn run lint",
+    "test": "npm run lint",
     "lint": "eslint --format 'node_modules/eslint-friendly-formatter' --ext js,vue webpack.config.js src",
     "dev": "webpack-dev-server --host='0.0.0.0' --progress --colors --inline --hot --output-public-path='/assets/'",
-    "build": "yarn run build:clean && yarn run build:webpack && yarn run build:view",
+    "build": "npm run build:clean && npm run build:webpack && npm run build:view",
     "build:clean": "rm -rf build",
     "build:view": " cp index.html build/index.html",
     "build:webpack": "webpack --optimize-minimize --output-public-path='./assets/'",
-    "deploy": "yarn run build && gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "keywords": [
     "lrc"
